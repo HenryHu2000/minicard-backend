@@ -1,14 +1,14 @@
-package org.skygreen.miniprogram;
+package org.skygreen.miniprogram.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class AccessToken {
+public class AccessTokenDto {
   @JsonProperty("access_token")
   private String accessToken;
   @JsonProperty("expires_in")
   private int expiresIn;
 
-  public AccessToken() {}
+  public AccessTokenDto() {}
 
   public String getAccessToken() {
     return accessToken;

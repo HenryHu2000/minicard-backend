@@ -1,4 +1,4 @@
-package org.skygreen.miniprogram;
+package org.skygreen.miniprogram.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

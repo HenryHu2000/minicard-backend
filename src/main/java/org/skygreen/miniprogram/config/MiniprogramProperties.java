@@ -1,4 +1,4 @@
-package org.skygreen.miniprogram;
+package org.skygreen.miniprogram.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class MiniprogramProperties {
   private String appid;
   private String secret;
+  private String accessToken;
 
   public String getAppid() {
     return appid;
@@ -23,6 +24,14 @@ public class MiniprogramProperties {
 
   public void setSecret(String secret) {
     this.secret = secret;
+  }
+
+  public String getAccessToken() {
+    return accessToken;
+  }
+
+  public void setAccessToken(String accessToken) {
+    this.accessToken = accessToken;
   }
 
 }

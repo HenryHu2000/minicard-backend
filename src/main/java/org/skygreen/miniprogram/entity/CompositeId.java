@@ -1,4 +1,4 @@
-package org.skygreen.miniprogram;
+package org.skygreen.miniprogram.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
