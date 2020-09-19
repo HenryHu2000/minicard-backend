@@ -1,7 +1,7 @@
 package org.skygreen.miniprogram.scheduler;
 
 import org.skygreen.miniprogram.config.MiniprogramProperties;
-import org.skygreen.miniprogram.dto.AccessTokenDto;
+import org.skygreen.miniprogram.data.AccessToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class TokenUpdateScheduler {
   public void updateAccessToken() {
     var url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="
         + miniprogramProperties.getAppid() + "&secret=" + miniprogramProperties.getSecret();
-    var accessToken = restTemplate.getForObject(url, AccessTokenDto.class).getAccessToken();
+    var accessToken = restTemplate.getForObject(url, AccessToken.class).getAccessToken();
     miniprogramProperties.setAccessToken(accessToken);
     log.info("WeChat access token updated");
   }
