@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity // This tells Hibernate to make a table out of this class
 @IdClass(CompositeId.class)
@@ -13,6 +14,7 @@ public class User {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
   @Id
+  @JsonIgnore
   private String openid;
   private String name;
   private String title;

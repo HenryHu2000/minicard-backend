@@ -115,10 +115,6 @@ public class MainController {
   }
 
   private static void setUserValues(User user, WebRequest webRequest) {
-    String openid = webRequest.getParameter("openid");
-    if (openid != null) {
-      user.setOpenid(openid);
-    }
     String name = webRequest.getParameter("name");
     if (name != null) {
       user.setName(name);
